@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
-import { FaMapMarkedAlt, FaPhoneAlt, FaBook, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
+import {FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa';
 
 const locations = [
   'Cincinnati',
@@ -98,25 +98,25 @@ const Navbar: React.FC<NavbarProps> = ({ textColor, setCurrentLocationIndex }) =
    );
 };
 
-interface NavLinkProps {
-   href: string;
-   icon: React.ReactNode; // Use React.ReactNode for react-icons
-   text: string;
-   textColor?: string;
-   mobile?: boolean; // Optional prop for mobile styling
-}
+// interface NavLinkProps {
+//    href: string;
+//    icon: React.ReactNode; // Use React.ReactNode for react-icons
+//    text: string;
+//    textColor?: string;
+//    mobile?: boolean; // Optional prop for mobile styling
+// }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, icon, text, textColor, mobile }) => (
-   <a 
-      href={href}
-      className={`flex items-center hover:bg-opacity-[0.80] transition-opacity duration-[300ms] ${
-         mobile ? "px-[12px] py-[8px] text-base" : "text-sm"
-      }`}
-      style={{ color: textColor }}
-   >
-      {icon}
-      <span className={`${mobile ? "ml-[8px]" : "ml-[8px] hidden md:inline"}`}>{text}</span>
-   </a>
-);
+// const NavLink: React.FC<NavLinkProps> = ({ href, icon, text, textColor, mobile }) => (
+//    <a 
+//       href={href}
+//       className={`flex items-center hover:bg-opacity-[0.80] transition-opacity duration-[300ms] ${
+//          mobile ? "px-[12px] py-[8px] text-base" : "text-sm"
+//       }`}
+//       style={{ color: textColor }}
+//    >
+//       {icon}
+//       <span className={`${mobile ? "ml-[8px]" : "ml-[8px] hidden md:inline"}`}>{text}</span>
+//    </a>
+// );
 
 export default Navbar;
